@@ -84,7 +84,7 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['email'])) {
                 <div class="card">
                     <img src="../../../assets/img/gato.png" alt="gato">
                     <div>
-                        <h2>Atenção Veterinária para Gatos</h2>
+                        <h2>Atendimento Veterinária para Gatos</h2>
                         <p>Atendimento voltado exclusivamente às necessidades dos felinos, com ambiente tranquilo,
                             exames precisos e manejo adequado para reduzir o estresse.</p>
                     </div>
