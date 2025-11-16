@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    background: linear-gradient(135deg, white, grey);
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 100px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+    padding: 12px;
+}
+
+.cabecalho h1 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 32px;
+    padding: 10px 0;
+    color: white;
+    transition: all 0.8s ease;
+}
+
+.cabecalho h1:hover {
+    transform: translateY(-5px);
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+
+.cabecalho a {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+    color: white;
+    gap: 10px;
+    padding: 0 10px 0 10px;
+    margin: 10px;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.cabecalho a:hover {
+    border-bottom: 3px solid rgb(155, 155, 155);
+    border-radius: 7px;
+    transform: translateY(-5px);
+}
+
+.borda {
+    display: inline-block;
+    border-bottom: 3px solid rgb(155, 155, 155);
+    transition: all 0.5s ease;
+}
+
+.borda:hover {
+    transform: translateY(-5px);
+}
+
+.atendimento {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+    background: green;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.atendimento:hover {
+    transform: scale(1.02);
+    background: rgb(0, 159, 0);
+}
+
+.atendimento:active {
+    transform: scale(0.98);
+    background: rgb(0, 88, 0);
+}
+
+.logout {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+    background: rgb(213, 0, 0);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.logout:hover {
+    transform: scale(1.02);
+    background: rgb(255, 0, 0);
+}
+
+.logout:active {
+    transform: scale(0.98);
+    background: rgb(164, 1, 1);
+}
+
+.conteudo {
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+.unica {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-indent: 18px;
+    padding-bottom: 120px;
+}
+
+.unica div {
+    max-width: 400px;
+}
+
+.unica p {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    margin: 20px;
+    color: black;
+}
+
+.unica h2 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.unica img {
+    width: 800px;
+    height: auto;
+    margin: 20px;
+}
+
+.sessoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    text-indent: 18px;
+    padding: 40px;
+}
+
+.sessoes p {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    color: black;
+    margin: 10px 0;
+}
+
+.sessoes div {
+    border-radius: 8px 6px 6px 8px;
+    border-left: rgb(71, 71, 71) solid 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+    max-width: 800px;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+.sessoes div:hover {
+    scale: 1.02;
+    background: rgb(185, 185, 185);
+    border-radius: 10px 8px 8px 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+    border-left: rgb(167, 167, 167) solid 8px;
+}
+
+.secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.secundario>h2 {
+    padding-top: 40px;
+    margin-top: 40px;
+}
+
+.secundario h2 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.funcionamento {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 30px;
+}
+
+.funcionamento div {
+    overflow: hidden;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 13px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.funcionamento div:hover {
+    transform: scale(1.1);
+    border-radius: 8px;
+    background: rgb(185, 185, 185);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.funcionamento div p {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
+    color: black;
+}
+
+.terciario {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.terciario>h2 {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-top: 100px;
+    margin-top: 100px;
+}
+
+.terciario h2 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.terciario>section {
+    flex-direction: row;
+}
+
+.dicas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card {
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    height: 250px;
+    width: 500px;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    scale: 1.02;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+    background: rgb(185, 185, 185);
+}
+
+.card:first-child div {
+    padding: 20px;
+}
+
+.card:first-child h2 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.card:first-child p {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 17px;
+    line-height: 1.9;
+    color: black;
+}
+
+.card:last-child {
+    padding: 30px;
+}
+
+.card:last-child p {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    color: black;
+}
+
+.card:last-child h2 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    color: black;
+}
+
+.card span {
+    color: rgb(92, 92, 92);
+    font-size: 20px;
+}
+
+.card button {
+    margin-top: 8px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: rgb(35, 62, 214);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card button:hover {
+    background-color: rgb(32, 62, 236);
+    transform: scale(1.05);
+}
+
+.card button:active {
+    color: rgb(202, 202, 202);
+    background-color: rgb(24, 45, 167);
+    transform: scale(0.95);
+}
+
+.quaternario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+
+.quaternario>h2 {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-top: 100px;
+    margin-top: 100px;
+}
+
+.quaternario h2 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.quaternario p {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.8;
+    text-indent: none;
+    color: black;
+}
+
+.localizacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.maps iframe {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    height: 400px;
+    width: 400px;
+    transition: all 0.3s ease;
+}
+
+.maps iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.quintenario {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.quintenario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-indent: 18px;
+}
+
+.quintenario div {
+    max-width: 400px;
+}
+
+.quintenario p {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 18px;
+    margin: 20px;
+    color: black;
+}
+
+.quintenario h2 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.quintenario img {
+    width: 800px;
+    height: auto;
+    margin: 20px;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 300px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: rgb(27, 27, 27);
+    width: 100%;
+    color: white;
+}
+
+.social div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.fa-instagram {
+    color: rgb(187, 107, 121);
+    transition: all 0.5s ease;
+}
+
+.fa-instagram:hover {
+    transform: scale(1.02);
+    color: rgb(180, 73, 91);
+}
+
+.fa-whatsapp {
+    color: green;
+    transition: all 0.5s ease;
+}
+
+.fa-whatsapp:hover {
+    color: rgb(0, 99, 0);
+    transform: scale(1.02);
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+}
+
+.botao-topo {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+}
+
+.botao-topo button {
+    background: grey;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.botao-topo button:hover {
+    background: rgb(150, 150, 150);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.botao-topo button:active {
+    background: rgb(85, 85, 85);
+    transform: scale(0.95);
+}
+
+.botao-baixo {
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+}
+
+.botao-baixo button {
+    background: grey;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.botao-baixo button:hover {
+    background: rgb(150, 150, 150);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.botao-baixo button:active {
+    background: rgb(85, 85, 85);
+    transform: scale(0.95);
+}

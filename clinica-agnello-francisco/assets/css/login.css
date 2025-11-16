@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+    background: linear-gradient(135deg, white, grey);
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    background-color: black;
+    padding: 12px;
+}
+
+.cabecalho h1 {
+    font-family: "SUSE Mono", sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    padding: 10px 0;
+    color: white;
+    transition: all 0.8s ease;
+}
+
+.cabecalho h1:hover {
+    transform: translateY(-5px);
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+
+.cabecalho a {
+    font-family: "SUSE Mono", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    margin: 10px;
+    transition: all 0.5s ease;
+}
+
+.cabecalho a:hover {
+    color: rgb(155, 155, 155);
+    border-bottom: 4px solid rgb(155, 155, 155);
+    border-radius: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+}
+
+.login h1 {
+    font-family: "SUSE Mono", sans-serif;
+    font-size: 1.8em;
+    color: black;
+    border-bottom: 3px solid black;
+    border-radius: 12px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.login p {
+    padding: 20px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+}
+
+.login h1:hover {
+    transform: scale(1.05);
+}
+
+.login input {
+    width: 100%;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 1em;
+    margin-bottom: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.login input:focus {
+    scale: 1.02;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+}
+
+.login button {
+    margin-top: 20px;
+    padding: 14px 35px;
+    color: black;
+    background: white;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.login button:active {
+    background: rgb(201, 201, 201);
+    box-shadow: rgba(0, 0, 0, 0.45);
+    transform: scale(0.95);
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    width: 100%;
+}
+
+.botao-topo,
+.botao-baixo {
+    position: fixed;
+    right: 30px;
+}
+
+.botao-topo { bottom: 70px; }
+.botao-baixo { bottom: 15px; }
+
+.botao-topo button,
+.botao-baixo button {
+    background: grey;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.botao-topo button:hover,
+.botao-baixo button:hover {
+    background: rgb(150, 150, 150);
+    transform: scale(1.1);
+}
+
+.botao-topo button:active,
+.botao-baixo button:active {
+    background: rgb(85, 85, 85);
+    transform: scale(0.95);
+}

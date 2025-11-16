@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    background: linear-gradient(135deg, white, grey);
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 100px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+    padding: 12px;
+}
+
+.cabecalho h1 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 32px;
+    padding: 10px 0;
+    color: white;
+    transition: all 0.8s ease;
+}
+
+.cabecalho h1:hover {
+    transform: translateY(-5px);
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+
+.cabecalho a {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+    color: white;
+    gap: 10px;
+    padding: 0 10px 0 10px;
+    margin: 10px;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.cabecalho a:hover {
+    border-bottom: 3px solid rgb(155, 155, 155);
+    border-radius: 7px;
+    transform: translateY(-5px);
+}
+
+.borda {
+    display: inline-block;
+    border-bottom: 3px solid rgb(155, 155, 155);
+    transition: all 0.5s ease;
+}
+
+.borda:hover {
+    transform: translateY(-5px);
+}
+
+.atendimento {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+    background: green;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.atendimento:hover {
+    transform: scale(1.02);
+    background: rgb(0, 159, 0);
+}
+
+.atendimento:active {
+    transform: scale(0.98);
+    background: rgb(0, 88, 0);
+}
+
+.logout {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+    background: rgb(213, 0, 0);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.logout:hover {
+    transform: scale(1.02);
+    background: rgb(255, 0, 0);
+}
+
+.logout:active {
+    transform: scale(0.98);
+    background: rgb(164, 1, 1);
+}
+
+.conteudo {
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.principal img {
+    width: 500px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.principal img:hover {
+    transform: scale(1.05);
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.principal h2 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.principal p {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-indent: 18px;
+    font-size: 15px;
+    color: black;
+}
+
+.secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.secundario h2 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.cards {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.cards>div {
+    width: 320px;
+    height: 480px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+    width: 295px;
+    height: 350px;
+    background: rgb(171, 170, 170);
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: all 0.8s ease;
+}
+
+.card img:hover {
+    background: rgb(217, 217, 217);
+}
+
+.card p {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-indent: 18px;
+    font-size: 15px;
+    color: black;
+}
+
+.card h3 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.cards div {
+    transition: all 0.3s ease;
+}
+
+.cards>div:hover {
+    transform: scale(1.05);
+    background: rgb(217, 217, 217);
+    box-shadow: 0 6px 20px rgba(223, 223, 223, 0.45);
+}
+
+.terciario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+.terciario h2 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.terciario h3 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 19px;
+    color: black;
+}
+
+.terciario p {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-indent: 18px;
+    font-size: 15px;
+    color: black;
+}
+
+.terciario section {
+    max-width: 600px;
+    margin-bottom: 120px;
+}
+
+.terciario div {
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.terciario div:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.quaternario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quaternario h2 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.terciario p {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    color: black;
+}
+
+.quaternario ul {
+    max-width: 600px;
+    margin-bottom: 120px;
+}
+
+.quaternario li {
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.quaternario li:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 300px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-color: rgb(27, 27, 27);
+    width: 100%;
+    color: white;
+}
+
+.social div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.fa-instagram {
+    color: rgb(187, 107, 121);
+    transition: all 0.5s ease;
+}
+
+.fa-instagram:hover {
+    transform: scale(1.02);
+    color: rgb(180, 73, 91);
+}
+
+.fa-whatsapp {
+    color: green;
+    transition: all 0.5s ease;
+}
+
+.fa-whatsapp:hover {
+    color: rgb(0, 99, 0);
+    transform: scale(1.02);
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+}
+
+.botao-topo {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+}
+
+.botao-topo button {
+    background: grey;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.botao-topo button:hover {
+    background: rgb(150, 150, 150);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.botao-topo button:active {
+    background: rgb(85, 85, 85);
+    transform: scale(0.95);
+}
+
+.botao-baixo {
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+}
+
+.botao-baixo button {
+    background: grey;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.botao-baixo button:hover {
+    background: rgb(150, 150, 150);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.botao-baixo button:active {
+    background: rgb(85, 85, 85);
+    transform: scale(0.95);
+}

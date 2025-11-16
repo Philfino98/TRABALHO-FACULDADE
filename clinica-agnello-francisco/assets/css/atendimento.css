@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    background: linear-gradient(135deg, white, grey);
+    width: 100%;
+    min-height: 100vh;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 0;
+    z-index: 1000;
+    background-color: black;
+    padding: 12px;
+    margin-bottom: 25px;
+}
+
+.cabecalho h1 {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 32px;
+    padding: 10px 0;
+    color: white;
+    transition: all 0.8s ease;
+}
+
+.cabecalho h1:hover {
+    transform: translateY(-5px);
+    color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+
+.cabecalho a {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+    color: white;
+    gap: 10px;
+    padding: 0 10px 0 10px;
+    margin: 10px;
+    transition: all 0.5s ease;
+}
+
+.cabecalho a:hover {
+    color: rgb(155, 155, 155);
+    border-bottom: 4px solid rgb(155, 155, 155);
+    border-radius: 10px;
+}
+
+.logout {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+    background: rgb(213, 0, 0);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.logout:hover {
+    transform: scale(1.02);
+    background: rgb(255, 0, 0);
+}
+
+.logout:active {
+    transform: scale(0.98);
+    background: rgb(164, 1, 1);
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.atendimento {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+}
+
+.atendimento fieldset {
+    position: relative;
+    padding: 0;
+}
+
+.atendimento legend {
+    display: block;
+    text-align: center;
+    margin: 0 auto 15px auto;
+    font-family: "SUSE Mono", sans-serif;
+    font-size: 1.8em;
+    color: black;
+    border-bottom: 3px solid grey;
+    border-radius: 12px;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.atendimento legend:hover {
+    border-radius: 8px;
+    transform: scale(1.05);
+}
+
+.atendimento label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    margin: 15px 0 5px;
+    color: black;
+}
+
+.atendimento select {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    padding: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.atendimento select:hover {
+    scale: 1.05;
+    background-color: rgb(219, 219, 219);
+}
+
+.atendimento input,
+.atendimento textarea {
+    position: relative;
+    width: 100%;
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.atendimento input:focus,
+.atendimento textarea:focus {
+    scale: 1.02;
+    box-shadow: 0 0 5px rgb(73, 73, 73);
+}
+
+.atendimento textarea {
+    resize: none;
+}
+
+.atendimento p {
+    padding: 20px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.atendimento button {
+    margin: auto;
+    display: block;
+    width: fit-content;
+    padding: 14px 35px;
+    color: black;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.atendimento button:hover {
+    background: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.atendimento button:active {
+    background: rgb(201, 201, 201);
+    transform: scale(0.95);
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.botao-topo {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+}
+
+.botao-topo button {
+    background: grey;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.botao-topo button:hover {
+    background: rgb(150, 150, 150);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.botao-topo button:active {
+    background: rgb(85, 85, 85);
+    transform: scale(0.95);
+}
+
+.botao-baixo {
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+}
+
+.botao-baixo button {
+    background: grey;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+}
+
+.botao-baixo button:hover {
+    background: rgb(150, 150, 150);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+}
+
+.botao-baixo button:active {
+    background: rgb(85, 85, 85);
+    transform: scale(0.95);
+}
