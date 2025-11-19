@@ -74,7 +74,7 @@ if (!isset($_SESSION['user_id']) && !isset($_SESSION['email'])) {
                 </div>
                 <div>
                     <h3>Atendimento de Urgência</h3>
-                    <p>Atendimento emergencial para situações críticas, com equipe veterinária preparada 24 horas.</p>
+                    <p>Atendimento emergencial para situações críticas, com equipe veterinária preparada.</p>
                 </div>
             </section>
         </section>
